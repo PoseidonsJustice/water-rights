@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="g3.png">
+<title>Yakima Water Resources Decision Support System</title>
+
+
+<script type="text/javascript" src="/OpenLayers-2.13.1/OpenLayers.js"></script>
+
+<script src="ext-3.2.1/adapter/ext/ext-base.js" type="text/javascript"></script>
+<script src="ext-3.2.1/ext-all.js"  type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="ext-3.2.1/resources/css/ext-all.css"></link>
+<script src="GeoExt/lib/GeoExt.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="GeoExt/resources/css/geoext-all.css"></link>
+<link rel="stylesheet" type="text/css" href="GeoExt/resources/css/geoext-all-debug.css"></link>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="mytree.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+
+
+</head>
+
+    <body>
+	
+	<div id="cover"><b>Loading.....</b>
+	</div>
+    
+        <div id="layerinfo" style="padding:5px">
+          <br>
+          <b>Devices</b>:&nbsp;&nbsp;WA Department of Ecology data on existing devices.
+          <br>
+          <br>
+          <b>KRD Turn-outs</b>:&nbsp;&nbsp;Kittitas Reclamation District diversion structures.
+          <br>
+          <br>
+          <b>KRD water delivery systems</b>:&nbsp;&nbsp;Kittitas Reclamation District water delivery canals.
+          <br>
+          <br>
+          <b>BOR Water infrastructure</b>:&nbsp;&nbsp;US Beareau of Reclamation's Water infrastructure.
+          <br>
+          <br>
+          <b>Recently Unblocked Habitat</b>:&nbsp;&nbsp;Yakima Basin Steelhead Revovery Plan.  Shows areas currently accessible to steelhead and coho salmon.
+          <br>
+          <br>
+          <b>Currenlty Blocked Habitat</b>:&nbsp;&nbsp;Yakima Basin Steelhead Revovery Plan.  Shows areas currently blocked to upstream migration of steelhead and coho salmon.
+          <br>
+          <br>
+          <b>Rivers</b>:&nbsp;&nbsp;WA Department of Natural Resources data on Kittitas rivers.
+          <br>
+          <br>
+          <b>BOR Water infrastructure</b>:&nbsp;&nbsp;US Beareau of Reclamation's Water infrastructure.
+          <br>
+          <br>
+          <b>Township-Range-Section</b>:&nbsp;&nbsp;Township, Range, and Section information for Kittitas County.
+          <br>
+          <br>
+          <b>Water Rights</b>:&nbsp;&nbsp;WA Department of Ecology data on existing devices.
+          <br>
+          <br>
+          <b>Sub-basins</b>:&nbsp;&nbsp;WA Department of Ecology Subbasins.        
+        </div>       	        	
+        
+        <div id="about" style="padding:5px">
+          <h1>Hello!</h1>
+          <br>
+          Welcome to the CWU Center for Spatial Information Kittitas Water Rights Mapping Project.  Turn on and off layers in the left hand layer panel to view different layers.  Or search for locations or features in the right hand panel.  
+          Click on a feature in the map to get information about that feature.  Feel free to expand/collapse the popups or move them around by clicking on the the pin icon.
+          Have fun and play around.
+          <br>
+          <br>
+          Happy Mapping!
+          <br>
+          <br>
+          Be sure to click on the links below for further information about resources.
+          <br>
+          <br>
+          This website does not cover <b>ALL</b> water rights for the state of Washington.  This is just a user interface to help with decision support for the Kittitas County area.
+          <br>
+          <br>
+          <b><u>Links</u></b>
+          <br>
+          <a href='http://www.ecy.wa.gov' target='_blank'>Washington State Department of Ecology</a>
+          <br>
+          <a href='http://www.cwu.edu' target='_blank'>Central Washington University</a>
+          <br>
+          <a href='http://www.cwu.edu/~csi' target='_blank'>Central Washington University Center for Spatial Information</a>
+          <br>
+          <a href='http://www.ruralgis.org/' target='_blank'>RGIS</a>
+          <br>
+          <br>
+          <b>Disclaimer</b><i>The data contained in this geo-spatial database has been compiled from a broad array of sources.  It is provided without warranty of any kind. The Center for Spatial Information does not warrant, guarantee, or make any representations regarding the use of, or results from the use of the Data in terms of correctness, accuracy, reliability, currentness, or otherwise.  Use these data solely at your own risk.</i>
+        </div>
+
+        <div id="metadata" style="padding:5px">
+          <h1>About Metadata</h1>Water Resource data in the Yakima Basin is continually collected and refined.  Every attempt has been made to collect the most recent data available.  Users are strongly encouraged to contact the agencies responsible for these data to obtain the most recent data available.
+          <br>
+          <br>
+          <br>
+          <b>Bureau of Reclamation Reservoir Levels</b>
+          <br>
+            <u>Layers</u>:&nbsp;&nbsp;BOR Water infrastructure - Hydro Stations, BOR Water infrastructure - Storage Reservoirs.
+            <br>
+            <u>Description</u>:&nbsp;&nbsp;This is a series of shapefiles including the outline of Bureau of Reclamation maintained reservoirs in the Upper Yakima Basin and stream gages.  The Bureau of Reclamation is currently updating these data with more precise GPS units in an effort to increase the precision of these data.  The hyperlinks lead to Bureau of Reclamation-run websites containing reservoir and stream gage data.
+            <br>
+            <u>Source</u>:&nbsp;&nbsp;U.S. Bureau of Reclamation--Yakima Field Office
+            <br>
+            <u>Date Obtained</u>:&nbsp;&nbsp;August, 2010
+            <br>
+            <u>Format of Data Obtained</u>:&nbsp;&nbsp;Geographic Information Systems Shapefiles
+            <br>
+            <u>Contact Information</u>:&nbsp;&nbsp;U.S. Bureau of Reclamation--Yakima Field Office
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Physical Address</u>:&nbsp;&nbsp;1910 Marsh Road Yakima, WA 98901-2058
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Phone</u>:&nbsp;&nbsp;(509) 575-5848
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Website</u>:&nbsp;&nbsp;<a href='http://www.usbr.gov/pn/about/contact.html' target='_blank'>http://www.usbr.gov/pn/about/contact.html</a>
+          <br>
+          <br>
+          <br>
+          <b>Kittitas Reclamation District Canal Data</b>
+          <br>
+            <u>Layers</u>:&nbsp;&nbsp;KRD water delivery systems.
+            <br>
+            <u>Description</u>:&nbsp;&nbsp;This is a Geographic Information System shapefile of the canals operated by the Kittitas Reclamation District (KRD).  The ID numbers are those assigned by the KRD.
+            <br>
+            <u>Source</u>:&nbsp;&nbsp;Kittitas Reclamation District
+            <br>
+            <u>Date Obtained</u>:&nbsp;&nbsp;August, 2010
+            <br>
+            <u>Format of Data Obtained</u>:&nbsp;&nbsp;Geographic Information Systems Shapefiles
+            <br>
+            <u>Contact Information</u>:&nbsp;&nbsp;Kittitas Reclamation Districte
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Physical Address</u>:&nbsp;&nbsp;315 North Water St. Ellensburg, WA 98926
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Phone</u>:&nbsp;&nbsp;(509) 925-6158
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Website</u>:&nbsp;&nbsp;<a href='http://krdistrict.org' target='_blank'>http://krdistrict.org</a>
+          <br>       
+          <br>
+          <br>
+          <b>Kittitas Reclamation District Turnouts Data</b>
+          <br>
+            <u>Layer</u>&nbsp;&nbsp;KRD Turn-outs.
+            <br>
+            <u>Description</u>:&nbsp;&nbsp;This is a Geographic Information System shapefile of the turnout (points where water is extracted from a watercourse) for the Kittitas Reclamation District (KRD).  The ID numbers are those assigned by the KRD.
+            <br>
+            <u>Source</u>:&nbsp;&nbsp;Kittitas Reclamation District
+            <br>
+            <u>Date Obtained</u>:&nbsp;&nbsp;August, 2010
+            <br>
+            <u>Format of Data Obtained</u>:&nbsp;&nbsp;Geographic Information Systems Shapefiles
+            <br>
+            <u>Contact Information</u>:&nbsp;&nbsp;Kittitas Reclamation Districte
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Physical Address</u>:&nbsp;&nbsp;315 North Water St. Ellensburg, WA 98926
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Phone</u>:&nbsp;&nbsp;(509) 925-6158
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Website</u>:&nbsp;&nbsp;<a href='http://krdistrict.org' target='_blank'>http://krdistrict.org</a>
+          <br>       
+          <br>
+          <br>
+          <b>Washington Department of Ecology Water Rights Data</b>
+          <br>
+            <u>Layers</u>:&nbsp;&nbsp;Water Rights, Devices.
+            <br>
+            <u>Description</u>:&nbsp;&nbsp;Dataset contains two categories of water rights data, devices and Place of Use.  Both databases are updated frequently, so check with the Department of Ecology for the most up-to-data data.  Online data dictionaries exist for both data sets on the Department of Ecology’s website. 
+            <br>
+            <u>Source</u>:&nbsp;&nbsp;State of Washington Department of Ecology—Yakima Field Office
+            <br>
+            <u>Date Obtained</u>:&nbsp;&nbsp;August, 2010
+            <br>
+            <u>Format of Data Obtained</u>:&nbsp;&nbsp;Geographic Information Systems Shapefiles and html
+            <br>
+            <u>Contact Information</u>:&nbsp;&nbsp;Washington State Department of Ecology-Yakima Field Office
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Physical Address</u>:&nbsp;&nbsp;15 W. Yakima Ave #200 Yakima, WA 98902
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Phone</u>:&nbsp;&nbsp;(509) 575-2490
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Website</u>:&nbsp;&nbsp;<a href='http://www.ecy.wa.gov/directory_cro.html' target='_blank'>http://www.ecy.wa.gov/directory_cro.html</a>
+          <br>
+          <br>
+          <br>
+          <b>Salmon Habitat Availability</b>
+          <br>
+            <u>Layers</u>:&nbsp;&nbsp;Recently Unblocked Habitat, Currently Blocked Habitat.
+            <br>
+            <u>Description</u>:&nbsp;&nbsp;These data, from the Yakima Basin Steelhead Recovery Plan (extracted from the 2005 Yakima Subbasin Salmon Recovery Plan), show areas accessible to steelhead and coho salmon, as well as areas currently blocked to upstream migration.
+            <br>
+            <u>Source</u>:&nbsp;&nbsp;Yakima Basin Fish and Wildlife Recovery Board
+            <br>
+            <u>Date Obtained</u>:&nbsp;&nbsp;August, 2010
+            <br>
+            <u>Format of Data Obtained</u>:&nbsp;&nbsp;Geographic Information Systems Shapefiles
+            <br>
+            <u>Contact Information</u>:&nbsp;&nbsp;Yakima Basin Fish and Wildlife Recovery Board
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Physical Address</u>:&nbsp;&nbsp;1110 West Lincoln Ave Yakima, WA 98902
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Phone</u>:&nbsp;&nbsp;(509) 453-4104
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Website</u>:&nbsp;&nbsp;<a href='www.ybfwrb.org' target='_blank'>www.ybfwrb.org</a>
+          <br>
+        </div>
+        
+        <div id="searchhelp" style="padding:5px">
+        <br>
+        <b>Search Help</b>
+        <br>
+        <br>
+        To use the search dialog box simply type in a value that you want to search for and then select how to search for that feature.
+        The search results will display all the values that match your search term.  Click on a search result to zoom the map to that feature.
+        </div>
+        
+        <div id="pdf" style="padding:5px">
+        Click on a link below to view court documents for the selected basin in PDF format.
+        <br>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin1LakeCleElum' target='_blank'>Subbasin #1 - Lake Cle Elum</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin2Easton' target='_blank'>Subbasin #2 - Easton</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin3Teanaway' target='_blank'>Subbasin #3 - Teanaway</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin4SwaukCreek' target='_blank'>Subbasin #4 - Swauk Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin5ElkHeights' target='_blank'>Subbasin #5 - Elk Heights</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin6TaneumCreek' target='_blank'>Subbasin #6 - Taneum Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin7ReecerCreek' target='_blank'>Subbasin #7 - Reecer Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin8Thorp' target='_blank'>Subbasin #8 - Thorp</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin9WilsonNaneum' target='_blank'>Subbasin #9 - Wilson Naneum</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin10Kittitas' target='_blank'>Subbasin #10 - Kittitas</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin11ManastashCreek' target='_blank'>Subbasin #11 - Manastash Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin12ShushuskinCreek' target='_blank'>Subbasin #12 - Shushuskin Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin13UmtanumCreek' target='_blank'>Subbasin #13 - Umtanum Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin14RozaCreek' target='_blank'>Subbasin #14 - Roza Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin15WenasCreek' target='_blank'>Subbasin #15 - Wenas Creek</a>
+        <br>
+        <a href='Adj_Court_Docs/Subbasin21Burbank' target='_blank'>Subbasin #21 - Burbank</a>
+        </div>
+        
+        <div id="legend">
+        <img src='legend4.png' alt='Legend Image Missing'/>
+        </div>
+
+        <div id="desc" style="padding:5px;">
+            <div id="searchform" style="padding:5px; overflow-y:hidden; overflow-x:hidden; position:relative;">				
+                <input type="text" name="search_term" id="search_term" maxlength="128" style="width: 125px;"> 
+                <br>
+                <input type="submit" value="Search" id="search_button">
+                <span Style="font-weight: normal;">by</span>
+                <br>
+                <select name="type_term" id="type_term" style="margin-top: 3px; width: 170px;" >
+                  <option value="basin" selected="selected">Sub-Basin</option>
+                  <option value="wrid">Water Right Doc ID</option>
+                  <option value="wrid2">Water Right Doc File #</option>
+                  <option value="hydrost">BOR Hyrdo Station Name</option>
+                  <option value="dvid">Device - DOE ID</option>
+                  <option value="krdto">KRD Turn-out Name</option>
+                  <option value="krddl">KRD Delivery Name</option>
+                  <option value="reser">Reservoir</option>
+                  <option value="riv">River</option>
+                  <option value="trs" >Township-Range-Section</option>
+                  <option value="rds" >Road Name</option>
+                </select>
+              </div>
+
+            <div id="nodelist" style="padding:5px; overflow-y:scroll; overflow-x:scroll; position:relative; border:1px solid #555; top:10px; width:170px; height:500px;">								
+                <h2>Getting Started</h2>
+                <p class="dialog">Click anywhere on the map for information about visible overlays.</p>
+                <p class="dialog">Search for geographic locations using the search box.</p>																	
+            </div>
+            <br>
+            <div id="clkzm">
+            <i>(Click on searched feature to zoom to general vincinity of feature)</i>
+            </div>
+            <div id="extents" style="position:absolute; left: 15px; top:140px; z-index:1001;"></div>
+         </div>
+
+    </body>
+
+</html>
